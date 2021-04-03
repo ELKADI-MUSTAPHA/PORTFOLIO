@@ -12,21 +12,19 @@ export default class Header extends Component {
   }
 
   handleResize = (e) => {
+    if(window.innerWidth > 767 ){
+      this.setState({show: true, disable: false})
+    }else{
+      this.setState({show: false, disable: true})
+    }
     this.setState({ windowWidth: window.innerWidth });
+
    };
-  
    componentDidMount() {
     window.addEventListener("resize", this.handleResize);
-    if(this.state.windowWidth > 767){
-      this.setState({show: true, disable: false})
-    }
    }
-  
    componentWillUnMount() {
     window.addEventListener("resize", this.handleResize);
-    if(this.state.windowWidth > 767){
-      this.setState({show: true, disable: false})
-    }
    }
    handleClick () {
      if(this.state.disable){
