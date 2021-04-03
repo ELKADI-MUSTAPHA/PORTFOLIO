@@ -108,7 +108,7 @@
       top: 0;
       right: 0;
    }
-   #nav-wrap > a + .mobile-btn {
+   #nav-wrap > a , .mobile-btn {
 	   width: 48px;
 		height: 48px;
 		text-align: left;
