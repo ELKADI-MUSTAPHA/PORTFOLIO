@@ -1,5 +1,39 @@
 import React, { Component } from 'react';
+
 export default class Header extends Component {
+  constructor(){
+    super();
+    this.handleClick = this.handleClick.bind(this);
+    this.state={
+        show:false,
+        windowWidth: window.innerWidth,
+        disable: true
+    }
+  }
+
+  handleResize = (e) => {
+    this.setState({ windowWidth: window.innerWidth });
+   };
+  
+   componentDidMount() {
+    window.addEventListener("resize", this.handleResize);
+    if(this.state.windowWidth > 767){
+      this.setState({show: true, disable: false})
+    }
+   }
+  
+   componentWillUnMount() {
+    window.addEventListener("resize", this.handleResize);
+    if(this.state.windowWidth > 767){
+      this.setState({show: true, disable: false})
+    }
+   }
+   handleClick () {
+     if(this.state.disable){
+      this.setState({ show: false });
+     }
+      return null;
+   }
   render() {
     let resumeData = this.props.resumeData;
     return (
@@ -7,16 +41,17 @@ export default class Header extends Component {
       
       <header id="home">
          <nav id="nav-wrap">
-            <button className="mobile-btn hider1"  title="Show navigation">Show navigation</button>
-          <button className="mobile-btn hider2"  title="Hide navigation">Hide navigation</button>
-            <ul id="nav" className="nav">
-               <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-               <li><a className="smoothscroll" href="#about">About</a></li>
-               <li><a className="smoothscroll" href="#resume">Resume</a></li>
-               <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-               <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
-               <li><a className="smoothscroll" href="#contact">Contact</a></li>
-            </ul>
+           <button className="toggle-btn" onClick={()=>{this.setState({show:!this.state.show})}}><i className={resumeData.barClassName}></i></button>
+            {/* <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+          <a className="mobile-btn" href="#" title="Hide navigation">Hide navigation</a> */}
+            {this.state.show? <ul id="nav" className="nav">
+               <li className="current"><a className="smoothscroll" href="#home"  onClick={this.handleClick}>Home</a></li>
+               <li><a className="smoothscroll" href="#about" onClick={this.handleClick}>About</a></li>
+               <li><a className="smoothscroll" href="#resume" onClick={this.handleClick}>Resume</a></li>
+               <li><a className="smoothscroll" href="#portfolio" onClick={this.handleClick}>Works</a></li>
+               <li><a className="smoothscroll" href="#testimonials" onClick={this.handleClick}>Testimonials</a></li>
+               <li><a className="smoothscroll" href="#contact" onClick={this.handleClick}>Contact</a></li>
+            </ul> : null}
          </nav>
 
          <div className="row banner">
@@ -26,6 +61,7 @@ export default class Header extends Component {
                </h3>
                <hr/>
                <ul className="social">
+           
                   {
                     resumeData.socialLinks && resumeData.socialLinks.map((item, index) =>{
                       return(

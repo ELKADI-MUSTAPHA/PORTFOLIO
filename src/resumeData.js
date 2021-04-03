@@ -14,7 +14,7 @@ let resumeData = {
     ],
     "skypeid": "Your skypeid",
     "roleDescription": "I've changed my career to be a full-time web developer, I like dabbling in various parts of frontend & backend development and like to learn about new technologies, I have a dream to build an amazing project in the future",
-
+    "barClassName": "fa fa-bars",
     "socialLinks":[
         {
           "name":"linkedin",
