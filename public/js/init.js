@@ -38,7 +38,7 @@
 ------------------------------------------------------*/
 
 	var sections = $("section");
-	var navigation_links = $("#nav-wrap a");
+	var navigation_links = $("#nav-wrap .mobile-btn");
 
 	sections.waypoint({
 
