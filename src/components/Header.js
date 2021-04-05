@@ -5,7 +5,7 @@ export default class Header extends Component {
     super();
     this.handleClick = this.handleClick.bind(this);
     this.state={
-        show:false,
+        show:true,
         windowWidth: window.innerWidth,
         disable: true
     }
@@ -22,9 +22,11 @@ export default class Header extends Component {
    };
    componentDidMount() {
     window.addEventListener("resize", this.handleResize);
+    this.handleResize();
    }
    componentWillUnMount() {
     window.addEventListener("resize", this.handleResize);
+    this.handleResize();
    }
    handleClick () {
      if(this.state.disable){
