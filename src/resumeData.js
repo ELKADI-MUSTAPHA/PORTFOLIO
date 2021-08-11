@@ -109,7 +109,8 @@ let resumeData = {
       {
         "name":"Ecolorentel",
         "description":"Company-App",
-        "imgurl":"images/portfolio/ecolorentel.jpg"
+        "imgurl":"images/portfolio/ecolorentel.jpg",
+        "url" : "https://ecolo-rentel.netlify.app/"
       }
     ],
     "testimonials":[
