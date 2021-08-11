@@ -89,24 +89,27 @@ let resumeData = {
     ],
     "portfolio":[
       {
-        "name":"project1",
-        "description":"BioFood-App",
-        "imgurl":"images/portfolio/biofood.png"
+        "name":"RESTA",
+        "description":"Food-App",
+        "imgurl":"images/portfolio/resta.JPG",
+        "url" : "https://resta-static.netlify.app/"
       },
       {
-        "name":"project2",
-        "description":"Read-App",
-        "imgurl":"images/portfolio/read.png"
+        "name":"Ecommerce-App",
+        "description":"Ecommerce-App",
+        "imgurl":"images/portfolio/ecom-react-app/JPG",
+        "url" : "https://react-ecommerc-app.netlify.app/"
       },
       {
-        "name":"project3",
-        "description":"Travel-App",  
-        "imgurl":"images/portfolio/travel.png"
+        "name":"Primobux",
+        "description":"Earning-App",  
+        "imgurl":"images/portfolio/primobux.JPG",
+        "url" : "https://primobux.netlify.app/"
       },
       {
-        "name":"project4",
-        "description":"Blogger-App",
-        "imgurl":"images/portfolio/blogger.jpg"
+        "name":"Ecolorentel",
+        "description":"Company-App",
+        "imgurl":"images/portfolio/ecolorentel.jpg"
       }
     ],
     "testimonials":[
