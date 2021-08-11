@@ -97,7 +97,7 @@ let resumeData = {
       {
         "name":"Ecommerce-App",
         "description":"Ecommerce-App",
-        "imgurl":"images/portfolio/ecom-react-app/JPG",
+        "imgurl":"images/portfolio/ecom.JPG",
         "url" : "https://react-ecommerc-app.netlify.app/"
       },
       {
