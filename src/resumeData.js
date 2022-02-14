@@ -89,10 +89,22 @@ let resumeData = {
     ],
     "portfolio":[
       {
+        "name":"Tasyir",
+        "description":"Digital-marketing",
+        "imgurl":"images/portfolio/tassyiir.JPG",
+        "url" : "https://digital-portfolio-tasyiir.netlify.app/"
+      },
+      {
         "name":"RESTA",
         "description":"Food-App",
         "imgurl":"images/portfolio/resta.JPG",
         "url" : "https://resta-static.netlify.app/"
+      },
+      {
+        "name":"Digital-company",
+        "description":"Digital-company",
+        "imgurl":"images/portfolio/digi-website.JPG",
+        "url" : "https://digi-marketing.netlify.app/"
       },
       {
         "name":"Ecommerce-App",
@@ -111,6 +123,18 @@ let resumeData = {
         "description":"Company-App",
         "imgurl":"images/portfolio/ecolorentel.jpg",
         "url" : "https://ecolo-rentel.netlify.app/"
+      },
+      {
+        "name":"Delavage v2",
+        "description":"Company-App",
+        "imgurl":"images/portfolio/delavage.jpg",
+        "url" : "https://delavage.netlify.app/"
+      },
+      {
+        "name":"The Blue Buildings",
+        "description":"Architectural Company",
+        "imgurl":"images/portfolio/thebluebuildings.jpg",
+        "url" : "https://thebluebuildings.com/"
       }
     ],
     "testimonials":[
